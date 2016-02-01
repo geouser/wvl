@@ -1,0 +1,901 @@
+
+<html>
+<head>
+
+    <title>Свадебный портал г. Владивостока</title>
+    <meta charset="UTF-8">
+    <!--Favico-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
+    <link rel="manifest" href="/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--//Favico-->
+    <META name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/bitrix/templates/main/fancybox/jquery.fancybox-1.2.1.pack.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="js/jquery.montage.min.js"></script>
+    <script type="text/javascript" src="js/jquery.preloader.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/template_styles.css" media="screen">
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="js/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () {
+        $('#status').fadeOut();
+        $('#preloader').delay(350).fadeOut('slow');
+        $('body').delay(350).css({'overflow': 'visible'});
+    })
+    //]]>
+</script>
+    <script>
+        $(function () {
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                title: "вход для жениха и невесты",
+                width: 350,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 1000
+                }
+            });
+            $("#dialog2").dialog({
+                autoOpen: false,
+                modal: true,
+                title: "вход для исполнителя",
+                width: 350,
+                open: function (event, ui) {
+                    $('.ui-widget-header').css('background', "#959595");
+                },
+                close: function (event, ui) {
+                    $('.ui-widget-header').css('background', "#dc4646");
+                },
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "drop",
+                    duration: 1000
+                }
+            });
+
+            $(".kab-login-link1").click(function () {
+                $("#dialog").dialog("open");
+            });
+            $(".kab-login-link2").click(function () {
+                $("#dialog2").dialog("open");
+            });
+            $(".user").click(function () {
+                $("#dialog").dialog("open");
+            });
+            $('#menu > li > ul').hide();
+
+            $('#menu > li').click(function () {
+                var text_li = $(this).find('a:first').text();
+
+                if ($(this).find('.menu_header').length == 0) {
+
+                    $(this).find('ul').prepend("<div class='menu_header'>" + text_li + "</div>").css("display", "block");
+                    $(this).find('ul').css("display", "block");
+                    $(this).addClass("menus-active");
+
+                } else {
+                    $(this).find('ul').css("display", "none");
+                    $(this).removeClass("menus-active");
+                    $(this).find('.menu_header').remove();
+
+                }
+            });
+
+            $('.nav-wrap').prepend('<div id="menu-icon">Каталог исполнителей</div>');
+
+            /* toggle nav */
+            $("#menu-icon").on("click", function () {
+                $(".nav-wrap ul").slideToggle();
+                $(this).toggleClass("active");
+            });
+
+        });
+
+
+    </script>
+
+    <script>
+        $(function () {
+            $(".rslides").responsiveSlides({
+                auto: true,
+                speed: 700,
+                timeout: 3000,
+                pager: false,
+                nav: true,
+                random: false,
+                pause: false,
+                pauseControls: true,
+                prevText: "",
+                nextText: "",
+                maxwidth: "",
+                navContainer: "",
+                manualControls: "",
+                namespace: "rslides",
+                before: function () {
+                },
+                after: function () {
+                }
+            });
+
+            $(".rslides_head").responsiveSlides({
+                auto: true,
+                speed: 400,
+                timeout: 6000,
+                pager: true,
+                nav: true,
+                random: false,
+                pause: false,
+                pauseControls: true,
+                prevText: "",
+                nextText: "",
+                maxwidth: "",
+                navContainer: "",
+                manualControls: "",
+                namespace: "rslides_head",
+                before: function () {
+                },
+                after: function () {
+                }
+            });
+
+            $(".rslides_floating").responsiveSlides({
+                auto: true,
+                speed: 400,
+                timeout: 6000,
+                pager: false,
+                nav: false,
+                random: false,
+                pause: false,
+                pauseControls: true,
+                prevText: "",
+                nextText: "",
+                maxwidth: 220,
+                navContainer: "",
+                manualControls: "",
+                namespace: "rslides_floating",
+                before: function () {
+                },
+                after: function () {
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(window).bind("load", function () {
+            $(".am-container").montage({
+                fillLastRow: true,
+                alternateHeight: true,
+                alternateHeightRange: {
+                    min: 90,
+                    max: 240
+                }
+            });
+
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var payWindow = $($('#pay-window').html()).clone();
+            $(".modal").fancybox({
+                afterLoad: function(){
+                    if (!$(this.element).hasClass('pay')) return;
+
+                    var type = $(this.element).data('type'),
+                        link = $(this.element).data('link');
+
+                    if (type == 'top'){
+                        $(this.content).find('#pay-btn').text('Поднять');
+                    }
+
+                    var content = this.content;
+                    $(document).on('click', '#pay-btn', function(event){
+                        var _this = $(this);
+                        $.ajax({
+                            url : link,
+                            data: {
+                                type : type
+                            }
+                        }).done(function(data){
+                            $('#pay-window').html(data);
+                        });
+                        event.preventDefault();
+                    });
+                },
+                afterClose: function(){
+                    $('#pay-window').html(payWindow);
+                }
+            });
+            $(document).on('click', '#cancel', function(){
+                $.fancybox.close();
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<div class="header">
+    <div class="header-center">
+        <div class="logotype">
+            <a href="/">
+                <div class="logo"></div>
+            </a>
+
+        </div>
+        <div class="site-profile">
+            <div class="mega-menu">
+                <ul id="menu">
+<li data-number="1"><a href="#">Исполнители</a>
+			    <ul class="active">
+			      <div class="mega-menu-list">
+					  <span><a href="/advert/list.php?SECTION_ID=9">Фотографы</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=13">Видеографы</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=20">Ведущие</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=17">Организаторы</a></span>
+				  </div>
+				  <div class="mega-menu-list">
+						<span><a href="/advert/list.php?SECTION_ID=18">Оформление и декор</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=24">Шоу программа</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=23">Свадебные торты</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=11">Постановка танца</a></span>
+				  </div>
+				  <div class="mega-menu-list">
+						<span><a href="/advert/list.php?SECTION_ID=22">Свадебные платья</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=10">Прически и макияж</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=16">Обручальные кольца</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=19">Свадебные авто</a></span>
+				  </div>
+				  <div class="mega-menu-list">
+						<span><a href="/advert/list.php?SECTION_ID=12">Банкетные залы</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=15">Номера для новобрачных</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=21">Свадебное путешествие</a></span>
+						<span><a href="/advert/list.php?SECTION_ID=14">Дополнительные услуги</a></span>
+				  </div>
+				  </ul>
+			  </li>
+			<li><a href="/news/">Журнал</a></li>
+		
+			<li><a href="/photoreport/">Фотоотчеты</a></li>
+		
+			<li><a href="/tender/">Тендеры</a></li>
+		
+
+</ul>
+
+
+</div>
+                                <div class="kabinet">
+                        <div class="kab-wrapper-t">
+                            <div class="kab-title">
+                                <div class="ribbon"></div>
+                                Мои исполнители
+                            </div>
+                            <div class="kab-cart">
+                                <div class="cart_img"><img
+                                        src="images/cart_img.jpg" alt=""/></div>
+                                <div class="cart_text">0
+                                </div>
+                            </div>
+                            <div class="clears"></div>
+                        </div>
+                        <div class="kab-wrapper-b">
+                            <div class="kab-login-family">
+                                <div class="ribbon2"></div>
+                                Войти 
+                            </div>
+                            <div class="kab-login-ispoln">
+                                <div class="kab-login-link1">Жениху Невесте</div>
+                                <div class="kab-login-link2">Исполнителю</div>
+                            </div>
+                                                        <div class="clears"></div>
+
+
+                            <!-- Диалоговое окно пользователя -->
+                            <div id="dialog" title="Basic dialog">
+                                <!--/*Функции личного кабинета временно отключены*/-->
+                                
+<div class="login-left login-area">
+    <div class="errors"></div>
+            <form name="system_auth_form6zOYVN" method="post" target="_top" action="/?login=yes" style="margin: 0;">
+                        <input type="hidden" name="AUTH_FORM" value="Y" />
+            <input type="hidden" name="ajax_key" value="8e55d06c2797ffba04098ddbcd29f66a" />
+            <input type="hidden" name="TYPE" value="AUTH" />
+            <div class="log-input-login">
+                Логин или E-Mail:<br />
+                <input type="text" class="login" name="USER_LOGIN" maxlength="50" value="" size="17" placeholder="Логин или электронная почта" />
+            </div>
+            <div class="log-input-passw">
+                Пароль:<br />
+                <input type="password" class="passw" name="USER_PASSWORD" maxlength="50" size="17" placeholder="Пароль" />
+            </div>
+                        <div class="clears"></div>
+            <div class="login-button">
+                <div class="button-log-left">
+                    <div><button name="Login">Войти</button></div>
+                    <p><a href="/auth/user_register.php">Регистрация</a></p>
+                    <p><a href="/auth/reset.php">Восстановить пароль</a></p>
+                    <p><a href="/help/">Помощник</a></p>
+                </div>
+                <div class="clears"></div>
+            </div>
+            <div class="login-in-socseti">
+                <div class="login-socseti-head"></div>
+                <div class="login-socseti-text">
+                    <div class="clears"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<script>
+    $(document).on('click', '.login-area form button', function(event){
+        var $form = $(this).closest('form');
+        $form.closest('.login-area').find('.errors').html();
+        $.post($form.attr('action'), $form.serialize(), function(data){
+            $('input', $form).removeAttr('disabled');
+            if (data.type == 'error') {
+                $form.closest('.login-area').find('.errors').html('Неверный логин или пароль');
+            } else {
+                window.location = window.location;
+            }
+        }, 'json');
+
+        event.preventDefault();
+    })
+</script>
+                            </div>
+                        </div>
+                        <!-- Диалоговое окно пользователя конец -->
+                        <!-- диалоговое окно -->
+                        <div id="dialog2" title="Вход для исполнителя">
+                            <!--/*На период бесплатного размещения функции личного кабинета отключены.
+                            По вопросам размещения обращайтесь по электронному адресу <a href="mailto:info@wvl.ru">info@wvl.ru</a> */-->
+                            
+<div class="login-left login-area">
+    <div class="errors"></div>
+            <form name="system_auth_formPqgS8z" method="post" target="_top" action="/?login=yes" style="margin: 0;">
+                        <input type="hidden" name="AUTH_FORM" value="Y" />
+            <input type="hidden" name="ajax_key" value="8e55d06c2797ffba04098ddbcd29f66a" />
+            <input type="hidden" name="TYPE" value="AUTH" />
+            <div class="log-input-login">
+                Логин или E-Mail:<br />
+                <input type="text" class="login" name="USER_LOGIN" maxlength="50" value="" size="17" placeholder="Логин или электронная почта" />
+            </div>
+            <div class="log-input-passw">
+                Пароль:<br />
+                <input type="password" class="passw" name="USER_PASSWORD" maxlength="50" size="17" placeholder="Пароль" />
+            </div>
+                        <div class="clears"></div>
+            <div class="login-button">
+                <div class="button-log-left">
+                    <div><button name="Login">Войти</button></div>
+                    <p><a href="/auth/user_register.php">Регистрация</a></p>
+                    <p><a href="/auth/reset.php">Восстановить пароль</a></p>
+                    <p><a href="/help/">Помощник</a></p>
+                </div>
+                <div class="clears"></div>
+            </div>
+            <div class="login-in-socseti">
+                <div class="login-socseti-head"></div>
+                <div class="login-socseti-text">
+                    <div class="clears"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+<script>
+    $(document).on('click', '.login-area form button', function(event){
+        var $form = $(this).closest('form');
+        $form.closest('.login-area').find('.errors').html();
+        $.post($form.attr('action'), $form.serialize(), function(data){
+            $('input', $form).removeAttr('disabled');
+            if (data.type == 'error') {
+                $form.closest('.login-area').find('.errors').html('Неверный логин или пароль');
+            } else {
+                window.location = window.location;
+            }
+        }, 'json');
+
+        event.preventDefault();
+    })
+</script>
+                        </div>
+                        <!-- Диалоговое окно конец -->
+                    </div>
+                </div>
+                <div class="clears"></div>
+            </div>
+            <div class="clears"></div>
+        </div>
+    </div>
+    <nav class="nav-wrap">
+         
+<ul class=>
+
+			<li><a href="/advert/list.php?SECTION_ID=9">Фотографы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=13">Видеографы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=20">Ведущие</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=17">Организаторы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=18">Оформление и декор</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=24">Шоу программа</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=23">Свадебные торты</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=11">Постановка танца</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=22">Свадебные платья</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=10">Прическа и макияж</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=16">Обручальные кольца</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=19">Свадебные авто</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=12">Банкетные залы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=15">Номера для новобрачных</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=21">Свадебные путешествия</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=14">Дополнительные услуги</a></li>
+		
+
+</ul>
+        </ul>
+    </nav>
+<div class="inner-wrapper">
+	<div class="wrapper">
+		<ul class="rslides_head">
+			<li><a href="/news/"><img src="images/slider/journal.jpg" alt=""></a></li>
+			<li><a href="https://vk.com/geo_photocollege" target="_blank"><img src="images/slider/geo.jpg" alt=""></a></li>
+			<li><a href="https://instagram.com/wvl_ru/" target="_blank"><img src="images/slider/insta.jpg" alt=""></a></li>
+		</ul>
+	</div>
+</div>
+<div class="about">
+	<div class="about-wrap">
+				 <div class="journal">
+			<div class="journal-left">
+				<div class="journal-left-header"><h1>Журнал</h1></div>
+				<div class="journal-left-body">
+
+<div class="journal-left-body-text">
+Слава Роска является победителем национальных и международных конкурсов флористов, владельцем и арт-директором сети салонов премиум Студия цветов «ROSCA». Во Владивостоке Слава провел мастер класс по креативной флористике. WVL не мог обойти стороной такое событие! Наша команда посетила мастер класс и пообщалась с ведущим флористом России!</div>
+<div class="journal-link">
+<a href="/news/detail.php?ID=346" class="link_docs">Читать</a>
+</div>
+</div>
+
+				<div class="journal-left-readall"><a href="/news/" class="link_docs">Читать все</a></div>
+				
+			</div>
+			<div class="journal-right">
+				<ul class="rslides">
+ 
+ 
+<img src="images/index2.png"  alt="Журнал" title="Журнал" /> 
+
+ 
+<img src="images/index2.png" alt="Журнал" title="Журнал" /> 
+
+ 
+<img src="images/index2.png" alt="Журнал" title="Журнал" /> 
+
+ 
+ 
+				</ul>
+			</div>
+			<div class="clears"></div>
+		</div>
+
+
+
+
+
+
+
+		<div class="video">
+			<div class="video-player">
+				<a class="video" href="#video"><img src="images/videos.jpg" alt=""></a>
+				<div style="display:none" id="video">
+<iframe width="853" height="480" src="https://www.youtube.com/embed/BJqmxl2c1OE" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+<script>
+$(document).ready(function (){
+$("a.video").fancybox(
+{
+"frameWidth": 853,
+"frameHeight": 480,
+"overlayOpacity": 0.9,
+"padding": 0,
+"margin":0,
+'callbackOnClose': function() {
+$("#fancy_content").empty();
+}
+
+});
+$(this).next()[0].pause();
+});
+</script>
+		<div class="sotseti">
+			<div class="sotdeti-head">
+				 Мы в социальных сетях
+			</div>
+			<div class="sotdeti-body">
+				<a href="https://vk.com/wvl_ru" target="_blank"><div class="link-vk2">
+					</div></a>
+				<a href="http://ok.ru/group/54550674276356" target="_blank"><div class="link-twit2">
+				</div></a>
+				<a href="https://instagram.com/wvl_ru/" target="_blank"><div class="link-face2">
+					</div></a>
+				<a href="http://www.youtube.com/channel/UCdpG7jHXKfuHnnggPy7zdHQ" target="_blank"><div class="link-vv2">
+					</div></a>
+				<div class="clears">
+				</div>
+			</div>
+		</div>
+		<div class="clears">
+		</div>
+	</div>
+</div>
+<div class="catalog">
+	<div class="catalog-wrap">
+		<div class="catalog-wrap-content">
+ 
+<ul class=>
+
+			<li><a href="/advert/list.php?SECTION_ID=9">Фотографы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=13">Видеографы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=20">Ведущие</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=17">Организаторы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=18">Оформление и декор</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=24">Шоу программа</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=23">Свадебные торты</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=11">Постановка танца</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=22">Свадебные платья</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=10">Прическа и макияж</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=16">Обручальные кольца</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=19">Свадебные авто</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=12">Банкетные залы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=15">Номера для новобрачных</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=21">Свадебные путешествия</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=14">Дополнительные услуги</a></li>
+		
+
+</ul>
+		</div>
+	</div>
+</div><div class="foto-otchet">
+	<div class="foto-content">
+		<div class="foto-content-wrapper">
+<div class="mobile-foto-text">Фотоотчеты</div>
+			<div class="otchet-ribbon">
+			</div>
+			 <!-- блоки  с фотографиями -->
+
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=1097">Впервые на море</a></div>
+									<div>15 Сентября 2015</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Кайда Иван</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=1097">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=1046">Ксения и Кирилл</a></div>
+									<div>5 Сентября 2015</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Иван Нездойминога</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=1046">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=954">Наталья и Александр</a></div>
+									<div>28 Августа 2015</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Антон Блохин</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=954">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=890">Царевна Лебедь</a></div>
+									<div>26 Июля 2015</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Антон Дьяченко</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=890">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=450">Виктория и Николай</a></div>
+									<div>7 Июня 2015</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Harlem Wedding Bar</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=450">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=440">Алена и Дима</a></div>
+									<div>20 Сентября 2014</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Мегаполис продакшн</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=440">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=354">Алексей и Софико</a></div>
+									<div>21 Февраля 2014</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Наталия Ташкинова</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=354">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+
+<div class="portf-wrap">
+	<div class="portf-wrap-text">
+		<div class="portf-ribbon"></div>
+		<div class="family-name">
+		
+						<div><a href="/photoreport/detail.php?ID=316">Сергей и Виктория</a></div>
+									<div>12 Сентября 2014</div>
+					</div>
+		<div class="photograf-text">
+			<div>фотограф</div>
+<div>Антон Дьяченко</div>
+		</div>
+	</div>
+	<div class="portf-img">
+							<a href="/photoreport/detail.php?ID=316">
+					 
+<img src="images/index.png" style="border-bottom:1px solid #707070"/></a>
+					</div>
+	<div class="clears"></div>
+</div>
+<!-- блоки  с фотографиями (конец) -->
+
+			<div class="link-all-fotootchet">
+				<a href="/photoreport/" class="link_docs">Смотреть все</a>
+			</div>
+		</div>
+	</div>
+</div><div class="footer">
+<div class="foot">
+	<div class="foot-content">
+		<div class="sot-seti-foot">
+			<div class="sotseti-flag">
+                                <!--<div class="link-v"></div>
+                                    <div class="link-od"></div>
+                                    <div class="link-fac"></div>
+                                    <div class="link-vv3"></div>
+                                    <div class="clears"></div>-->
+                        </div>
+			<div class="soglashenie">
+				<div class="rules"><a class="text fancybox.iframe" href="/rules.html">Правила сайта</a>
+				</div>
+<div class="helper">
+		<a class="text" href="/help/">Помощник</a>
+				</div>
+				<script>$(".text").fancybox();</script>
+
+			</div>
+		</div>
+
+
+		<div class="dop-menu-foot">
+			 
+<ul class=>
+
+			<li><a href="/advert/list.php?SECTION_ID=9">Фотографы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=13">Видеографы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=20">Ведущие</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=17">Организаторы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=18">Оформление и декор</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=24">Шоу программа</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=23">Свадебные торты</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=11">Постановка танца</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=22">Свадебные платья</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=10">Прическа и макияж</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=16">Обручальные кольца</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=19">Свадебные авто</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=12">Банкетные залы</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=15">Номера для новобрачных</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=21">Свадебные путешествия</a></li>
+		
+			<li><a href="/advert/list.php?SECTION_ID=14">Дополнительные услуги</a></li>
+		
+
+</ul>
+</div>
+		</div>
+		<div class="clears"></div>
+	</div>
+
+
+	<div class="foot-content2">
+		<div class="adress">Контактная почта <a href="mailto:info@wvl.ru">info@wvl.ru</a>
+</div>
+<div class="wedban"><a target="_blank" href="https://professionalwedding.org">
+<img src="https://professionalwedding.org/images/uploads/banners/468x60v2.png"
+alt="Международная Свадебная Федерация" 
+	width="468" height="60"></a></div>
+		<div class="copyrights">Все права защищены WVL.RU © Wedding Vladivostok</div>
+		<div class="clears"></div>
+	</div>
+</div>
+</div>
+<!-- Yandex.Metrika counter -->
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/959444892/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<div id="pay-window">
+    <h2>Оплата</h2>
+	<div class="content-body">Данная операция повлечёт за собой списание средаст с лицевого счёта. Продолжить?</div>
+    <div class="modal-buttons">
+        <button id="pay-btn">Оплатить</button>
+        <button id="cancel">Отмена</button>
+    </div>
+</div>
+</body>
+</html>
