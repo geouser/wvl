@@ -2354,7 +2354,8 @@ font-weight: normal;
     width: 468px;   
 }
 
-
+.journal-left img.preview,
+.date, .articleDescr {display: none;}
 
 @media (max-width: 1240px) {
   .header {background: none;}
@@ -2418,4 +2419,23 @@ font-weight: normal;
 @media (max-width: 1030px) {
 .journal-left-header h1 {padding: 10px 5px;}
 .foto-otchet {background-position: 48% 0%;}
+
+
+.about {height: auto;}
+.journal-right {display: none;}
+.about-wrap .video {display: none;}
+.about-wrap .sotseti {display: none;}
+.about-wrap .journal, .about-wrap  .journal-left { width: 100%;}
+
+.about-wrap  .journal-left {box-sizing: border-box; background-color: transparent; color: #212526; height: auto; border-bottom: 2px solid #C40000;}
+.journal-left p {font-size: 19px; font-family: 'Open Sans', sans-serif; font-weight: normal;}
+.journal-left img.preview {width: 100%; display: block; margin-bottom: 30px; margin-top: 10px;}
+.journal-left-body {padding: 0 30px;}
+.journal {height: auto;}
+.journal-left-readall {display: none;}
+.journal-link {display: none;}
+p.date {color: #DC4646; font: 18px 'Open Sans'; text-align: center; display: block; margin: 30px 0 15px;}
+.journal-left-header h1 {text-transform: uppercase; font: 48px 'Open Sans'; font-weight: 100; color: #FFF; text-align: center; padding: 45px 0; background-color: #DC4646;}
+.articleDescr {display: block; text-align: center; color: #212526; text-align: center; font: 28px 'Open Sans'; font-weight: 700; padding: 0 40px;}
+.journal-left-header {margin-bottom: 25px;}
 }
