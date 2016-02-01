@@ -117,6 +117,21 @@
                 $(this).toggleClass("active");
             });
 
+
+
+            $('.close_menu').on('click', function(event) {
+                $('.mega-menu.active').removeClass('active'); // скрываем его
+                $('body').removeClass('overflow');
+            });
+            /*menu sliding*/
+            $('.menu_open').on('click', function(event) {
+                event.preventDefault();
+                $('.mega-menu').toggleClass('active');
+                $('body').addClass('overflow');
+            });
+
+            
+
         });
 
 
@@ -246,6 +261,7 @@
 </div>
 <div class="header">
     <div class="header-center">
+        <button class="hidden menu_open"></button>
         <div class="logotype">
             <a href="/">
                 <div class="logo"></div>
@@ -255,45 +271,49 @@
         <div class="site-profile">
             <div class="mega-menu">
                 <ul id="menu">
-                <li data-number="1"><a href="#">Исполнители</a>
-			    <ul class="active">
-			      <div class="mega-menu-list">
-					  <span><a href="/advert/list.php?SECTION_ID=9">Фотографы</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=13">Видеографы</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=20">Ведущие</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=17">Организаторы</a></span>
-				  </div>
-				  <div class="mega-menu-list">
-						<span><a href="/advert/list.php?SECTION_ID=18">Оформление и декор</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=24">Шоу программа</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=23">Свадебные торты</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=11">Постановка танца</a></span>
-				  </div>
-				  <div class="mega-menu-list">
-						<span><a href="/advert/list.php?SECTION_ID=22">Свадебные платья</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=10">Прически и макияж</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=16">Обручальные кольца</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=19">Свадебные авто</a></span>
-				  </div>
-				  <div class="mega-menu-list">
-						<span><a href="/advert/list.php?SECTION_ID=12">Банкетные залы</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=15">Номера для новобрачных</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=21">Свадебное путешествие</a></span>
-						<span><a href="/advert/list.php?SECTION_ID=14">Дополнительные услуги</a></span>
-				  </div>
-				  </ul>
-			  </li>
-			<li><a href="/news/">Журнал</a></li>
-		
-			<li><a href="/photoreport/">Фотоотчеты</a></li>
-		
-			<li><a href="/tender/">Тендеры</a></li>
-		
+                    <li data-number="1"><a href="#">Исполнители</a>
+    			    <ul class="active">
+    			      <div class="mega-menu-list">
+    					    <span><i class="i1"></i><a href="/advert/list.php?SECTION_ID=9">Фотографы</a></span>
+    						<span><i class="i2"></i><a href="/advert/list.php?SECTION_ID=13">Видеографы</a></span>
+    						<span><i class="i3"></i><a href="/advert/list.php?SECTION_ID=20">Ведущие</a></span>
+    						<span><i class="i4"></i><a href="/advert/list.php?SECTION_ID=17">Организаторы</a></span>
+    				  </div>
+    				  <div class="mega-menu-list">
+    						<span><i class="i5"></i><a href="/advert/list.php?SECTION_ID=18">Оформление и декор</a></span>
+    						<span><i class="i6"></i><a href="/advert/list.php?SECTION_ID=24">Шоу программа</a></span>
+    						<span><i class="i7"></i><a href="/advert/list.php?SECTION_ID=23">Свадебные торты</a></span>
+    						<span><i class="i8"></i><a href="/advert/list.php?SECTION_ID=11">Постановка танца</a></span>
+    				  </div>
+    				  <div class="mega-menu-list">
+    						<span><i class="i9"></i><a href="/advert/list.php?SECTION_ID=22">Свадебные платья</a></span>
+    						<span><i class="i10"></i><a href="/advert/list.php?SECTION_ID=10">Прически и макияж</a></span>
+    						<span><i class="i11"></i><a href="/advert/list.php?SECTION_ID=16">Обручальные кольца</a></span>
+    						<span><i class="i12"></i><a href="/advert/list.php?SECTION_ID=19">Свадебные авто</a></span>
+    				  </div>
+    				  <div class="mega-menu-list">
+    						<span><i class="i13"></i><a href="/advert/list.php?SECTION_ID=12">Банкетные залы</a></span>
+    						<span><i class="i14"></i><a href="/advert/list.php?SECTION_ID=15">Номера для новобрачных</a></span>
+    						<span><i class="i15"></i><a href="/advert/list.php?SECTION_ID=21">Свадебное путешествие</a></span>
+    						<span><i class="i16"></i><a href="/advert/list.php?SECTION_ID=14">Дополнительные услуги</a></span>
+    				  </div>
+    				  </ul>
+    			  </li>
+    			<li><a href="/news/">Журнал</a></li>
+    		
+    			<li><a href="/photoreport/">Фотоотчеты</a></li>
+    		
+    			<li><a href="/tender/">Тендеры</a></li>
 
-</ul>
+                <li class="hidden"><a href="#">Правила сайта</a></li>
+                <li class="hidden"><a href="#">Помощник</a></li>	
+            </ul> <!-- end #menu-->
+
+            <div class="close_menu"></div>
+        </div> <!-- end mega-menu-->
 
 
-</div>
+
                                 <div class="kabinet">
                         <div class="kab-wrapper-t">
                             <div class="kab-title">
@@ -301,10 +321,11 @@
                                 Мои исполнители
                             </div>
                             <div class="kab-cart">
-                                <div class="cart_img"><img
-                                        src="images/cart_img.jpg" alt=""/></div>
-                                <div class="cart_text">0
+                                <div class="cart_img">
+                                    <img src="images/cart_img.jpg" class="white" alt=""/>
+                                    <img src="images/cart_dark.png" class="dark" alt=""/>
                                 </div>
+                                <div class="cart_text">3/112 550 Руб.</div>
                             </div>
                             <div class="clears"></div>
                         </div>
@@ -314,7 +335,7 @@
                                 Войти 
                             </div>
                             <div class="kab-login-ispoln">
-                                <div class="kab-login-link1">Жениху Невесте</div>
+                                <div class="kab-login-link1">Жениху/Невесте</div>
                                 <div class="kab-login-link2">Исполнителю</div>
                             </div>
                                                         <div class="clears"></div>
