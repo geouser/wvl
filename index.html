@@ -617,7 +617,14 @@ $(this).next()[0].pause();
 </div>
 
 <script>
-    $('.catalog').insertBefore('.about');
+    if ($(window).width() < 1030) {
+        $('.catalog').insertBefore('.about');
+    }
+    $(window).resize(function() {
+      if ($(window).width() < 1030) {
+        $('.catalog').insertBefore('.about');
+      }
+    });
 </script>
 
 <div class="foto-otchet">
