@@ -1060,7 +1060,7 @@ $(this).next()[0].pause();
             <!-- блоки  с фотографиями (конец) -->
 
     		<div class="link-all-fotootchet">
-    			<a href="/photoreport/" class="link_docs">Смотреть все</a>
+    			<a href="www.go" class="link_docs">Смотреть все</a>
     		</div>
 
     		</div>
@@ -1082,7 +1082,7 @@ $(this).next()[0].pause();
 <script>
     if ($(window).width() < 1030) {
         $('.catalog').insertBefore('.about');
-        $('.link-all-fotootchet').appendTo('#accordion h3');
+        $('.link-all-fotootchet').appendTo('.about-wrap');
         $( "#accordion" ).accordion({
             collapsible: true,
             animate: 500
@@ -1095,7 +1095,7 @@ $(this).next()[0].pause();
             collapsible: true,
             animate: 500
         });
-        $('.link-all-fotootchet').appendTo('#accordion h3');
+        $('.link-all-fotootchet').appendTo('.about-wrap');
       }
     });
     $('.closeAc').click(function () {
