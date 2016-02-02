@@ -2475,6 +2475,7 @@ h3.mobile,
                           z-index: 100;
                           min-height: 100%;
                           padding-top: 40px;
+                          box-sizing: border-box;
                           background-color: #DEDEDE;}
   .close_menu           { position: absolute;
                             top: 0;
