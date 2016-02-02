@@ -2492,7 +2492,8 @@ h3.mobile,
                           font-size: 24px;
                           color: #3d3d3d;
                           text-align: left;
-                          position: relative;}
+                          position: relative;
+                          font-family: 'Open Sans';}
   #menu > li:hover > a  { color: #000;}
   #menu li:first-child > a:after {
     content: '';
@@ -2539,7 +2540,8 @@ h3.mobile,
                           color: #3d3d3d;
                           font-size: 16px;
                           vertical-align: middle;
-                          line-height: 18px;}
+                          line-height: 18px;
+                          font-family: 'Open Sans'}
   .mega-menu-list a:hover { color: #DC4647;}
   .i1                   { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAMAAAByxz6RAAAAt1BMVEWBhIX///+BhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIUB92oaAAAAPHRSTlMAAAECBAUJCw0QExQXGRodJCYsLzc4PkBDRU9SWFthaW11eHmAgoOFiI6RnautusDDxcfR3unv9ff5+/2pEWaHAAAAnElEQVR42m3J1xaCMBBF0UmCvWLvqFgj9q7z/9+lSBIyLM/TXXcDi6r7piGHMKZIoFWTkGNTW1N5IaXc2HT8HusuQOqpn22jkKtO3qhqQUmtew1+pXfqmBqqgEqcosPXNGagKyYoGxPsCb3AIo/QlVk0IITcojklNyZ+o3QAUw8p4UyLi0nCIB+CM0JDGTSdl36Apj6wzgX/9FiJD5EkQFxpsjQAAAAAAElFTkSuQmCC);}
   .i2                   { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAPCAMAAAAvUzStAAAAY1BMVEWBhIX///+BhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIWBhIUgAn7uAAAAIHRSTlMAAAECBQkVHh8gIzw+QERKTGNsdHmFjpGUo6ji6O/1+x736/0AAABcSURBVHjazdBHEoAgEETRBsw5i3nuf0rFkg017P3bt+qGSPrBLQcgTMiIqbM6cnq9qlLMxCUhVHMMPpXFRuTVkuiHGmqr/N5ofXRi1XyFuEbF4WJ/Rru7durg0xstWiwZtNX7iQAAAABJRU5ErkJggg==);}
@@ -2643,6 +2645,7 @@ h3.mobile,
     padding: 15px 10px;
     text-align: left;
     margin: 10px 0;
+    font-family: 'Open Sans';
   }
   .kab-login-ispoln div:hover {
     color: #fff;
