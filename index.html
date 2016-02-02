@@ -207,6 +207,7 @@
     <script type="text/javascript">
         $(window).bind("load", function () {
             $(".am-container").montage({
+                liquid: true,
                 fillLastRow: true,
                 alternateHeight: true,
                 alternateHeightRange: {
@@ -1070,14 +1071,16 @@ $(this).next()[0].pause();
 </div>
 
 <script type="text/javascript">
-        $(window).bind("load", function () {
-            $(".am-container").montage({
-                fillLastRow: true,
-                liquid  : true,
-                margin : 1
-            });
-        });
-    </script>
+    $(".am-container").montage({
+        liquid: true,
+       fillLastRow  : true,
+        alternateHeight : true,
+        alternateHeightRange : {
+            min : 90,
+            max : 240
+        }
+    });
+</script>
 
 <script>
     if ($(window).width() < 1030) {
