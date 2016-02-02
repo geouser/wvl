@@ -2836,7 +2836,16 @@ line-height: 1;
 }
 
 #accordion .ui-widget-content {height: auto !important;}
-
+.footer {background-color: #DEDEDE; border-top: 2px solid #C40000;}
+.dop-menu-foot {display: none;}
+.sot-seti-foot {width: 100%; text-align: center;}
+.sotseti-flag {display: none;}
+.soglashenie a {color: #DC4646; font: 24px 'Open Sans'; font-weight: 700;}
+.soglashenie .rules {margin-bottom: 20px;}
+.foot {width: 100%; padding: 0;}
+.foot-content2 {display: none;}
+.foot-content {height: auto; padding: 90px 0 70px;}
+.sot-seti-foot {float: none;}
 }
 
 @media (max-width: 600px) {
