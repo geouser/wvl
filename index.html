@@ -26,6 +26,7 @@
     <META name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.0.min.js"></script>
     <script type="text/javascript" src="/bitrix/templates/main/fancybox/jquery.fancybox-1.2.1.pack.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script type="text/javascript" src="js/responsiveslides.min.js"></script>
@@ -121,14 +122,16 @@
 
 
             $('.close_menu').on('click', function(event) {
+                $(this).css('position', 'absolute');
                 $('.mega-menu.active').removeClass('active'); // скрываем его
-                $('body').removeClass('overflow');
+                $('body, html').removeClass('overflow');
             });
             /*menu sliding*/
             $('.menu_open').on('click', function(event) {
                 event.preventDefault();
                 $('.mega-menu').toggleClass('active');
-                $('body').addClass('overflow');
+                $('.close_menu').css('position', 'fixed');
+                $('body, html').addClass('overflow');
             });
 
             
@@ -207,6 +210,7 @@
     <script type="text/javascript">
         $(window).bind("load", function () {
             $(".am-container").montage({
+<<<<<<< HEAD
                 liquid: true,
                 fillLastRow: true,
                 alternateHeight: true,
@@ -214,6 +218,15 @@
                     min: 90,
                     max: 240
                 }
+=======
+                fillLastRow : true,
+                alternateHeight : true,
+                alternateHeightRange : {
+                    min : 60,
+                    max : 120
+                },
+                margin : 0
+>>>>>>> ccbfd6ca4b402873cc46048107695213e99188e2
             });
 
 
@@ -1071,6 +1084,7 @@ $(this).next()[0].pause();
 </div>
 
 <script type="text/javascript">
+<<<<<<< HEAD
     $(".am-container").montage({
         liquid: true,
        fillLastRow  : true,
@@ -1081,9 +1095,19 @@ $(this).next()[0].pause();
         }
     });
 </script>
+=======
+        $(window).bind("load", function () {
+            $(".am-container").montage({
+                fillLastRow: true,
+                liquid  : false,
+                margin : 1
+            });
+        });
+    </script>
+>>>>>>> ccbfd6ca4b402873cc46048107695213e99188e2
 
 <script>
-    if ($(window).width() < 1030) {
+    if ($(window).width() <= 1030) {
         $('.catalog').insertBefore('.about');
         $('.link-all-fotootchet').appendTo('.about-wrap');
         $( "#accordion" ).accordion({
@@ -1092,7 +1116,7 @@ $(this).next()[0].pause();
         });
     }
     $(window).resize(function() {
-      if ($(window).width() < 1030) {
+      if ($(window).width() <= 1030) {
         $('.catalog').insertBefore('.about');
         $( "#accordion" ).accordion({
             collapsible: true,
