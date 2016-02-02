@@ -1435,7 +1435,7 @@ display:none;
 background: #333638;
 position: absolute;
 width: 500px;
-top: 0;
+top: 100%;
 left: 0;
 font-weight: bold;
 z-index: 99;
@@ -1477,6 +1477,7 @@ padding: 10px 20px;
 padding: 10px 20px;
 color: white;
   background: url(../images/no-active.png) no-repeat 118px 15px;
+  display: none;
 }
 .mega-menu-list span {
 color: white;
