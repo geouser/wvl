@@ -121,14 +121,16 @@
 
 
             $('.close_menu').on('click', function(event) {
+                $(this).css('position', 'absolute');
                 $('.mega-menu.active').removeClass('active'); // скрываем его
-                $('body').removeClass('overflow');
+                $('body, html').removeClass('overflow');
             });
             /*menu sliding*/
             $('.menu_open').on('click', function(event) {
                 event.preventDefault();
                 $('.mega-menu').toggleClass('active');
-                $('body').addClass('overflow');
+                $('.close_menu').css('position', 'fixed');
+                $('body, html').addClass('overflow');
             });
 
             
