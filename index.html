@@ -26,6 +26,7 @@
     <META name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.0.min.js"></script>
     <script type="text/javascript" src="/bitrix/templates/main/fancybox/jquery.fancybox-1.2.1.pack.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script type="text/javascript" src="js/responsiveslides.min.js"></script>
@@ -209,12 +210,13 @@
     <script type="text/javascript">
         $(window).bind("load", function () {
             $(".am-container").montage({
-                fillLastRow: true,
-                alternateHeight: true,
-                alternateHeightRange: {
-                    min: 90,
-                    max: 240
-                }
+                fillLastRow : true,
+                alternateHeight : true,
+                alternateHeightRange : {
+                    min : 60,
+                    max : 120
+                },
+                margin : 0
             });
 
 
@@ -1075,14 +1077,14 @@ $(this).next()[0].pause();
         $(window).bind("load", function () {
             $(".am-container").montage({
                 fillLastRow: true,
-                liquid  : true,
+                liquid  : false,
                 margin : 1
             });
         });
     </script>
 
 <script>
-    if ($(window).width() < 1030) {
+    if ($(window).width() <= 1030) {
         $('.catalog').insertBefore('.about');
         $('.link-all-fotootchet').appendTo('.about-wrap');
         $( "#accordion" ).accordion({
@@ -1091,7 +1093,7 @@ $(this).next()[0].pause();
         });
     }
     $(window).resize(function() {
-      if ($(window).width() < 1030) {
+      if ($(window).width() <= 1030) {
         $('.catalog').insertBefore('.about');
         $( "#accordion" ).accordion({
             collapsible: true,
