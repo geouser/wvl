@@ -1099,8 +1099,9 @@ $(this).next()[0].pause();
             animate: 500
         });
         $('.link-all-fotootchet').appendTo('.about-wrap');
-      }
+      } else { $( "#accordion" ).accordion( "destroy" ); };
     });
+
     $('.closeAc').click(function () {
         $("#accordion").accordion({active: false}).click();
     });
